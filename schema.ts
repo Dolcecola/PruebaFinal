@@ -1,18 +1,12 @@
 export const schema = `#graphql
 
-type Contact{
+type Cocktail{
     id: ID!
-    nombre: String!
-    telefono: String!
-    pais: String!
+    name: String!
+    ingredients: [String!]!
 }
 
 type Query{
-    getContacts: [Contact!]!
+    getCocktails: [Cocktail!]!
 }
-
-type Mutation{
-    addContact(nombre: String!, telefono: String!): Contact!
-}
-
 `
